@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #passcode {
+  font-size: 28px;
+  padding: 12px;
+  width: 150px;
+  text-align: center;
+  letter-spacing: 8px;
+  border-radius: 10px;
+  }
+  .hidden{
+    display: none;
+  }
+  </style>
+  <title>Birthday Surprise ❤️</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- PASSCODE PAGE -->
+<div id="page1" class="page">
+  <h2> Enter Passcode 💖</h2>
+
+  <input type="password" id="passcode" readonly>
+  <p id="message" style="color:red"></p>
+
+  <div class="keypad">
+    <button onclick="addNumber('1')">1</button>
+    <button onclick="addNumber('2')">2</button>
+    <button onclick="addNumber('3')">3</button>
+
+    <button onclick="addNumber('4')">4</button>
+    <button onclick="addNumber('5')">5</button>
+    <button onclick="addNumber('6')">6</button>
+
+    <button onclick="addNumber('7')">7</button>
+    <button onclick="addNumber('8')">8</button>
+    <button onclick="addNumber('9')">9</button>
+
+    <button onclick="clearPass()">❌</button>
+    <button onclick="addNumber('0')">0</button>
+    <button onclick="checkPass()">✔️</button>
+  </div>
+</div>
+
+<!-- READY PAGE -->
+<div id="page2" class="page hidden">
+  <h2>Are you ready for surprise? 🥺</h2>
+  <button onclick="nextPage(3)">YES</button>
+  <button onclick="goNo()">NO</button>
+</div>
+
+<!-- ANGRY PAGE -->
+<div id="page-no" class="page hidden">
+  <h2>Excuse Me?? No ahh?</h2>
+  <p>Yes click panu Kondruva😅</p>
+  <button onclick="backToQuestion()">TRY AGAIN😏</button>
+</div>
+
+<!-- BIRTHDAY PAGE -->
+<div id="page3" class="page hidden">
+  <h1>Happy Birthday My Love❤️</h1>
+  <p>You're My Favourite Person💗✨</p>
+  <button onclick="nextPage(4)">NEXT</button>
+</div>
+
+<!-- GIFTS PAGE -->
+<div id="page4" class="page hidden">
+  <h2> A Special Gift for you 🎁</h2>
+  <div class="gift-container">
+   <img src="giftimage.png" class="gift" onclick="openGift(1)">
+   <img src="giftimage.png" class="gift" onclick="openGift(2)">
+   <img src="giftimage.png" class="gift" onclick="openGift(3)">
+  </div>
+</div>
+<!--letter-->
+<div id="page5" class="hidden page">
+  <div class="letter">
+    <h2 class="dear">Dear my Man,</h2>
+    <p>Frist Wish You a Many More Happy Birthday ❤️🤌🏻, Nee epovum sirichitae alaga irukanum athu than enoda asa 💝✨,Nee en life la vantha aprm than nariaya miracles nadathu Iruku ellathulayumae nee kadaichathuku naa than romba romba lucky ❤️🫂 En life la en Mela romba pasam kamicha oru person na athu nee matum than 🥺🫂 Na epo una ena pathupa nu ketalum avalo cute ahh Nala pathupanu soluva oru vatti kuda ethumae sonathu ila 🩵✨ Loveeeee Youuuuuuu Sooo Muchhh 😘💋 Ena frist day meet pana vara apo late ayidum avalo sikarama kelambi vantha na oru yellow kurthi potutu vantha apo alaga kuda ila ana apovum alaga iruken nu sona 🤭 apo than frist time unkuda avalo close ahh pakathula okantha antha than most memorable day 🤍✨Next bouquet gift pana with a diary milk athu than en life layae enaku vantha frist bouquet 😅🤭 
+Enaku enga appa epdiyoo antha mari than Neeyum en appa epdi pathuparoo apdi pathupa ❤️😘 Epo meet panalum nee ena Rasikara Vidhom iruka cute 🥰❤️
+En life la naraiya moments ahh kudutha oru person 🩵🫂 You're my favourite guy 😘💋 una avalo pudikum na unakaga epovum irupa 💟🤍 ellam situation la yum loveeeee youuuuuuu sooo much ❤️🫂 Naaa una kandipa happy ya pathupa the forever ♾️ ethukum bayapadatha unkuda na iruken ❤️🫂 Loveeeee Youuuuuuu Sooo Muchhh ❤️✨</p>
+    <p class="signature">Forever yours,<br>swathi❤️</p>
+    <button onclick="nextPage(4)">BACK</button>
+  </div>
+</div>
+
+<!--gift 2 photos-->
+<div id ="page6" class="page hidden">
+  <h2>Our Memories 📸💖</h2>
+  <div class="polaroid-container">
+    <div class="polaroid">
+      <img src="fristmeet.jpeg">
+      <p>Our first meet❤️</p>
+    </div>
+
+    <div class="polaroid">
+      <img src="thatcutemoment.jpeg">
+      <p>That cute moment🥺</p>
+    </div>
+
+    <div class="polaroid">
+      <img src="foreverfav.jpeg">
+      <p>Forever fav memory💖</p>
+    </div>
+    <div class="polaroid">
+      <img src="handholding.jpeg">
+      <p>holding moment🫴</p>
+    </div>
+    <div class="polaroid">
+      <img src="sweetmoment.jpeg">
+      <p>Sweet moment😘</p>
+    </div>
+    <div class="polaroid">
+      <img src="templedate.jpeg">
+      <p>Together in temple💝</p>
+    </div>
+    <div class="polaroid">
+      <img src="fristbus.jpeg">
+      <p>Frist bus🤍</p>
+    </div>
+    <div class="polaroid">
+    <img src="fristmall.jpeg">
+    <p>Frist mall💕</p>
+    </div>
+    <div class="polaroid">
+    <img src="best moment.jpeg">
+    <p>Best gift forever❤️‍🩹</p>
+    </div>
+
+  <div class="back-btn">
+    <button onclick="nextPage(4)">BACK</button>
+  </div>
+  </div>
+</div>
+<div id="page7" class="page hidden">
+  <h2 class="final-title">Once again Happy Birthday💖</h2>
+
+  <p class="final-text">
+    Real surprise is waiting... 🎁✨ <br><br>
+    With love ❤️
+  </p>
+
+  <button onclick="nextPage(4)">BACK</button>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
